@@ -36,7 +36,6 @@ final class MWSClientTest extends TestCase {
     $this->assertTrue($stub->validateCredentials());
   }
 
-
   public function testCompetetivePricingWithTooManyASINs(): void {
     $stub = $this->getMockBuilder(\MCS\MWSClient::class)
       ->disableOriginalConstructor()
@@ -53,5 +52,3 @@ final class MWSClientTest extends TestCase {
     $stub->GetCompetitivePricingForASIN($tooLargeAsinArray);
   }
 }
-
-
